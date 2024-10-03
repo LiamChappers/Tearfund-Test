@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "tearfund-regular";
+    src: url("../resources/fonts/tearfund_font-regular") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "tearfund-bold";
+    src: url("../resources/fonts/tearfund_font-bold") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+}
+
+.tearfund-bg {
+    background-image: url('../resources/images/WhereYourMoneyGoes-Mobile.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.container article {
+    background: #FFF;
+    border-radius: 10px;
+    display: block;
+    margin: 55vh 24px 24px 24px;
+    padding: 20px;
+}
+
+.container article h1 {
+    color: #333333;
+    font-family: tearfund-bold, Helvetica, sans-serif;;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 36px;
+    margin-top: 0px;
+    position: relative;
+}
+
+.container article h1:after {
+    background: #008CAA;
+    bottom: -24px;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 48px;
+}
+
+.container article p {
+    color: #333333;
+    font-family: tearfund-regular, Helvetica, sans-serif;;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 4px 0;
+}
+
+.container article p strong {
+    font-family: tearfund-bold, Helvetica, sans-serif;;
+}
+
+.container article p:last-child { 
+    margin-bottom:0;
+}
+
+.container article .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container article .button-container button {
+    background: #6F3F87;
+    border: 0;
+    border-radius: 6px;
+    color: #FFF;
+    font-family: tearfund-bold, Helvetica, sans-serif;;
+    font-size: 20px;
+    line-height: 26px;
+    min-width: 140px;
+    padding: 11px;
+    width: calc(50% - 6px);
+}
+
+.container article .button-container button:hover {
+    background: #775389;
+    transition: 0.1s;
+}
+
+.container article .button-container button:active {
+    background: #785788;
+    transition: 0.1s;
+}
+
+.container article .button-container button:focus-visible {
+    outline: 2px solid #d585fd;
+    transition: 0.1s;
+}
+
+.container article .button-container button:last-child {
+    background: #173145;
+}
+
+.container article .button-container button:last-child:hover {
+    background: #234056;
+}
+
+.container article .button-container button:last-child:active {
+    background: #2e4a5f;
+}
+
+.container article .button-container button:last-child:focus-visible {
+    outline: 2px solid #3988c3;
+    transition: 0.1s;
+}
+
+.container article .donation-details {
+    background: #6F3F87;
+    border-radius: 6px;
+    color: #FFF;
+    display: block;
+    margin-top: 15px;
+    padding: 20px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.container article .donation-details h2 {
+    font-family: tearfund-Bold, Helvetica, sans-serif;;
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.container article .donation-details p {
+    color: #FFF;
+    margin-top: 12px;
+}
+
+.container article .donation-details:before {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 11px solid #6F3F87;
+    content: "";
+    display: block;
+    height: 0;
+    left: calc((50% - 24px) / 2 );
+    position: absolute;
+    top: -9px;
+    transition: 0.2s;
+    width: 0;
+}
+
+.container article .donation-details span {
+    display: none;
+}
+
+.container article .donation-details span.show {
+    display: block;
+}
+
+.container article .donation-details.details-22 {
+    background: #173145;
+}
+
+.container article .donation-details.details-22:before {
+    border-bottom: 10px solid #173145;
+    left: calc(100% - (25% + 6px));
+}
+
+@media (min-width: 768px) {
+    .tearfund-bg {
+        background-image: url('../resources/images/WhereYourMoneyGoes-Desktop.png');
+        background-position: 40% 0%;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2% 0;
+    }
+
+    .container article {
+        margin: 0% 24px 0% auto;
+        max-width: 400px;
+        padding: 32px;
+    }
+
+    .container article h1 br{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+    .tearfund-bg {
+        background-position: 60% 0%;
+    }
+}
+
+@media (min-width: 960px) {
+    .tearfund-bg {
+        background-position: 40% 0%;
+    }
+}
+
+@media screen and (min-width: 960px) and (orientation: landscape) {
+    .tearfund-bg {
+        background-position: 45% 0%;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .container {
+        padding: 5% 0;
+    }
+
+    .container article {
+        margin-right: 5%;
+        max-width: 600px;
+        padding: 56px;
+    }
+
+    .container article h1{
+        font-size: 40px;
+        line-height: 52px;
+    }
+
+    .container article p {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 6px 0;
+    }
+
+    .container article .button-container button {
+        font-size: 26px;
+        line-height: 30px;
+        padding: 17px;
+    }
+
+    .container article .donation-details {
+        padding: 32px;
+    }
+}
